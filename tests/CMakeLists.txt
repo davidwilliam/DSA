@@ -1,12 +1,7 @@
-include(FetchContent)
-FetchContent_Declare(
-  googletest
-  GIT_REPOSITORY https://github.com/google/googletest.git
-  GIT_TAG        release-1.11.0
-)
-FetchContent_MakeAvailable(googletest)
+add_executable(test_bubble_sort test_bubble_sort.cpp)
 
-add_executable(test_dsa test_dsa.cpp)
-target_link_libraries(test_dsa gtest gtest_main)
-target_include_directories(test_dsa PRIVATE ${PROJECT_SOURCE_DIR}/include)
-add_test(NAME DsaTest COMMAND test_dsa)
+target_link_libraries(test_bubble_sort gtest gtest_main dsa)
+
+target_include_directories(test_bubble_sort PRIVATE ${PROJECT_SOURCE_DIR}/include)
+
+add_test(NAME BubbleSortTests COMMAND test_bubble_sort)

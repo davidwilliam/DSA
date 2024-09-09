@@ -1,6 +1,6 @@
 #ifndef DSA_H
 #define DSA_H
 
-void example_function();
+#include "bubble_sort.h"
 
 #endif
