@@ -24,6 +24,7 @@ This project provides implementations for various data structures and algorithms
     - Merge Sort
     - Shell Sort
     - Counting Sort
+    - Radix Sort
     - More coming soon.
 - Additional algorithms and data structures will be added progressively.
 

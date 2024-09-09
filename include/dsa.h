@@ -8,5 +8,6 @@
 #include "merge_sort.h"
 #include "shell_sort.h"
 #include "counting_sort.h"
+#include "radix_sort.h"
 
 #endif
