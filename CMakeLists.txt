@@ -4,7 +4,7 @@ project(DSA VERSION 1.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_library(dsa src/bubble_sort.cpp src/selection_sort.cpp src/insertion_sort.cpp src/quick_sort.cpp src/merge_sort.cpp)
+add_library(dsa src/bubble_sort.cpp src/selection_sort.cpp src/insertion_sort.cpp src/quick_sort.cpp src/merge_sort.cpp src/shell_sort.cpp)
 target_include_directories(dsa PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 add_executable(main src/main.cpp)
@@ -40,3 +40,7 @@ add_test(NAME QuickSortTests COMMAND test_quick_sort)
 add_executable(test_merge_sort tests/test_merge_sort.cpp)
 target_link_libraries(test_merge_sort gtest_main dsa)
 add_test(NAME MergeSortTests COMMAND test_merge_sort)
+
+add_executable(test_shell_sort tests/test_shell_sort.cpp)
+target_link_libraries(test_shell_sort gtest_main dsa)
+add_test(NAME ShellSortTests COMMAND test_shell_sort)
