@@ -16,17 +16,16 @@ This is a project with straightforward implementations of solutions for problems
 
 This project provides implementations for various data structures and algorithms. Currently, it includes:
 
-- Algorithms:
-    - Sorting algorithms:
-        - Bubble Sort
-        - Selection Sort
-        - Insertion Sort
-        - Quick Sort
-        - Merge Sort
-        - Shell Sort
-        - Counting Sort
-        - Radix Sort
-        - Heap Sort
+- Sorting:
+    - Bubble Sort
+    - Selection Sort
+    - Insertion Sort
+    - Quick Sort
+    - Merge Sort
+    - Shell Sort
+    - Counting Sort
+    - Radix Sort
+    - Heap Sort
 - Additional algorithms and data structures will be added progressively.
 
 The project supports C++17 and uses **CMake** as the build system and **GoogleTest** for testing.
