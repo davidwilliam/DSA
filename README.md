@@ -16,7 +16,7 @@ This is a project with straightforward implementations of solutions for problems
 
 This project provides implementations for various data structures and algorithms. Currently, it includes:
 
-- Sorting algorithms (Bubble Sort, and more coming soon)
+- Sorting algorithms (Bubble Sort, Selection Sort, and more coming soon)
 - Additional algorithms and data structures will be added progressively.
 
 The project supports C++17 and uses **CMake** as the build system and **GoogleTest** for testing.
@@ -89,3 +89,7 @@ To run the tests, use the following command from the `build/` directory:
 ```bash
 ctest
 ```
+
+# Contributing
+
+Feel free to contribute by adding more algorithms or improving the existing ones. Please submit a pull request with clear documentation of changes.
