@@ -26,6 +26,7 @@ int main() {
     std::vector<int> quicksort_array = {33, 21, 10, 8, 7, 6, 15};
     std::vector<int> mergesort_array = {38, 27, 43, 3, 9, 82, 10};
     std::vector<int> shellsort_array = {99, 35, 22, 48, 76, 13, 66};
+    std::vector<int> countingsort_array = {5, 3, 9, 1, 7, 3, 8};
 
     BubbleSort bubbleSort;
     SelectionSort selectionSort;
@@ -33,6 +34,7 @@ int main() {
     QuickSort quickSort;
     MergeSort mergeSort;
     ShellSort shellSort;
+    CountingSort countingSort;
 
     std::cout << std::endl; 
     std::cout << "Welcome to the DSA Library!" << std::endl;
@@ -44,6 +46,7 @@ int main() {
     sortAndDisplay(quicksort_array, "Quick Sort", quickSort);
     sortAndDisplay(mergesort_array, "Merge Sort", mergeSort);
     sortAndDisplay(shellsort_array, "Shell Sort", shellSort);
+    sortAndDisplay(countingsort_array, "Counting Sort", countingSort);
 
     std::cout << std::endl; 
 
