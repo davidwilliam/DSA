@@ -9,5 +9,6 @@
 #include "shell_sort.h"
 #include "counting_sort.h"
 #include "radix_sort.h"
+#include "heap_sort.h"
 
 #endif

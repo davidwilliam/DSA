@@ -28,6 +28,7 @@ int main() {
     std::vector<int> shellsort_array = {99, 35, 22, 48, 76, 13, 66};
     std::vector<int> countingsort_array = {5, 3, 9, 1, 7, 3, 8};
     std::vector<int> radixsort_array = {170, 45, 75, 90, 802, 24, 2, 66};
+    std::vector<int> heapsort_array = {12, 11, 13, 5, 6, 7};
 
     BubbleSort bubbleSort;
     SelectionSort selectionSort;
@@ -37,6 +38,7 @@ int main() {
     ShellSort shellSort;
     CountingSort countingSort;
     RadixSort radixSort;
+    HeapSort heapSort;
 
     std::cout << std::endl; 
     std::cout << "Welcome to the DSA Library!" << std::endl;
@@ -50,6 +52,7 @@ int main() {
     sortAndDisplay(shellsort_array, "Shell Sort", shellSort);
     sortAndDisplay(countingsort_array, "Counting Sort", countingSort);
     sortAndDisplay(radixsort_array, "Radix Sort", radixSort);
+    sortAndDisplay(heapsort_array, "Heap Sort", heapSort);
 
     std::cout << std::endl; 
 

@@ -25,6 +25,7 @@ This project provides implementations for various data structures and algorithms
     - Shell Sort
     - Counting Sort
     - Radix Sort
+    - Heap Sort
     - More coming soon.
 - Additional algorithms and data structures will be added progressively.
 
