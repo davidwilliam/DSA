@@ -100,3 +100,7 @@ ctest
 # Contributing
 
 Feel free to contribute by adding more algorithms or improving the existing ones. Please submit a pull request with clear documentation of changes.
+
+# License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/davidwilliam/DSA/blob/main/LICENSE) file for details.
