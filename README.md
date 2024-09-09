@@ -21,6 +21,7 @@ This project provides implementations for various data structures and algorithms
     - Selection Sort
     - Insertion Sort
     - Quick Sort
+    - Merge Sort
     - More coming soon.
 - Additional algorithms and data structures will be added progressively.
 
