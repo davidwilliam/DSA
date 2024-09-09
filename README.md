@@ -17,7 +17,7 @@ This is a project with straightforward implementations of solutions for problems
 This project provides implementations for various data structures and algorithms. Currently, it includes:
 
 - Sorting:
-    - [Bubble Sort](https://www.davidwsilva.com/computer_science/cs_1/){:target="_blank"}
+    - <a href="https://www.davidwsilva.com/computer_science/cs_1/" target="_blank">Bubble Sort</a>
     - Selection Sort
     - Insertion Sort
     - Quick Sort
