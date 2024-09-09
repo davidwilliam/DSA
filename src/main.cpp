@@ -2,7 +2,6 @@
 #include <vector>
 #include "dsa.h"
 
-// Function to print an array
 void printArray(const std::vector<int>& array, const std::string& message) {
     std::cout << message;
     for (const int& num : array) {
@@ -11,7 +10,6 @@ void printArray(const std::vector<int>& array, const std::string& message) {
     std::cout << std::endl;
 }
 
-// Function to sort and display the result
 template <typename SortAlgorithm>
 void sortAndDisplay(std::vector<int> array, const std::string& algorithmName, SortAlgorithm& sorter) {
     std::cout << "== " << algorithmName << " ==" << std::endl;
@@ -32,7 +30,6 @@ int main() {
     std::cout << "Welcome to the DSA Library!" << std::endl;
     std::cout << "Here are some examples." << std::endl;
 
-    // Sort and display using the respective sorting algorithms
     sortAndDisplay(bubble_array, "Bubble Sort", bubbleSort);
     sortAndDisplay(selection_array, "Selection Sort", selectionSort);
     sortAndDisplay(insertion_array, "Insertion Sort", insertionSort);
