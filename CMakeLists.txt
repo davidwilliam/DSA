@@ -4,7 +4,7 @@ project(DSA VERSION 1.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_library(dsa src/bubble_sort.cpp src/selection_sort.cpp)
+add_library(dsa src/bubble_sort.cpp src/selection_sort.cpp src/insertion_sort.cpp)
 target_include_directories(dsa PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 add_executable(main src/main.cpp)
@@ -28,3 +28,7 @@ target_link_libraries(test_selection_sort gtest_main dsa)
 
 add_test(NAME BubbleSortTests COMMAND test_bubble_sort)
 add_test(NAME SelectionSortTests COMMAND test_selection_sort)
+
+add_executable(test_insertion_sort tests/test_insertion_sort.cpp)
+target_link_libraries(test_insertion_sort gtest_main dsa)
+add_test(NAME InsertionSortTests COMMAND test_insertion_sort)
