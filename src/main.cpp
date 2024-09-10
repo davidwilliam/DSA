@@ -71,6 +71,11 @@ int main() {
     std::string testString1 = "A man, a plan, a canal: Panama";
     std::string testString2 = "Not a palindrome";
 
+    std::string s1 = "egg";
+    std::string s2 = "add";
+    std::string s3 = "foo";
+    std::string s4 = "bar";
+
     std::cout << std::endl; 
     std::cout << "Welcome to the DSA Library!" << std::endl;
     std::cout << "Here are some examples." << std::endl;
@@ -113,8 +118,6 @@ int main() {
         std::cout << "No triplets found." << std::endl;
     }
 
-    std::cout << std::endl;
-
     std::cout << "\n== Four Sum ==" << std::endl;
     auto four_sum_result = arrayAlgorithms.fourSum(four_sum_array, four_sum_target);
     if (!four_sum_result.empty()) {
@@ -123,14 +126,19 @@ int main() {
         std::cout << "No quadruplets found." << std::endl;
     }
 
-    std::cout << std::endl;
-
     std::cout << "\n== Is a palindrome? ==" << std::endl;
     std::cout << "Testing string: \"" << testString1 << "\"" << std::endl;
     std::cout << "Is palindrome? " << (stringObj.isPalindrome(testString1) ? "Yes" : "No") << std::endl;
 
     std::cout << "Testing string: \"" << testString2 << "\"" << std::endl;
     std::cout << "Is palindrome? " << (stringObj.isPalindrome(testString2) ? "Yes" : "No") << std::endl;
+
+     std::cout << "\n== Isomorphic? ==" << std::endl;
+    std::cout << "Testing if \"" << s1 << "\" and \"" << s2 << "\" are isomorphic: "
+              << (stringObj.isIsomorphic(s1, s2) ? "Yes" : "No") << std::endl;
+
+    std::cout << "Testing if \"" << s3 << "\" and \"" << s4 << "\" are isomorphic: "
+              << (stringObj.isIsomorphic(s3, s4) ? "Yes" : "No") << std::endl;
 
 
     return 0;

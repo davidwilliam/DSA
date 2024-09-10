@@ -20,3 +20,15 @@ TEST(StringTest, SingleCharacterString) {
     dsa::String stringObj;
     EXPECT_TRUE(stringObj.isPalindrome("a"));
 }
+
+TEST(StringTest, IsomorphicStrings) {
+    dsa::String stringObj;
+    EXPECT_TRUE(stringObj.isIsomorphic("egg", "add"));
+    EXPECT_TRUE(stringObj.isIsomorphic("paper", "title"));
+}
+
+TEST(StringTest, NonIsomorphicStrings) {
+    dsa::String stringObj;
+    EXPECT_FALSE(stringObj.isIsomorphic("foo", "bar"));
+    EXPECT_FALSE(stringObj.isIsomorphic("ab", "aa"));
+}
