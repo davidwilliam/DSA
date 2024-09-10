@@ -19,7 +19,7 @@ This project provides implementations for various data structures and algorithms
 - **Sorting:**
     - [Bubble Sort](https://www.davidwsilva.com/computer_science/cs_1/)
     - [Selection Sort](https://www.davidwsilva.com/computer_science/cs_2/)
-    - Insertion Sort
+    - [Insertion Sort](https://www.davidwsilva.com/computer_science/cs_3/)
     - Quick Sort
     - Merge Sort
     - Shell Sort
