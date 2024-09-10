@@ -21,6 +21,21 @@ void sortAndDisplay(std::vector<int> array, const std::string& algorithmName, So
     printArray(array, "Array after sorting with " + algorithmName + ": ");
 }
 
+void printArrayOfArrays(const std::vector<std::vector<int>>& array, const std::string& message) {
+    std::cout << message;
+    for (const auto& triplet : array) {
+        std::cout << "[";
+        for (size_t i = 0; i < triplet.size(); i++) {
+            std::cout << triplet[i];
+            if (i < triplet.size() - 1) {
+                std::cout << ", ";
+            }
+        }
+        std::cout << "] ";
+    }
+    std::cout << std::endl;
+}
+
 int main() {
     std::vector<int> bubble_array = {9, 2, 5, 3, 11, 8, 4};
     std::vector<int> selection_array = {7, 34, 22, 29, 39, 21, 35};
@@ -35,6 +50,8 @@ int main() {
     std::vector<int> two_sum_array = {2, 7, 11, 15};
     int two_sum_target = 22;
 
+    std::vector<int> three_sum_array = {-1, 0, 1, 2, -1, -4};
+
     BubbleSort bubbleSort;
     SelectionSort selectionSort;
     InsertionSort insertionSort;
@@ -44,7 +61,7 @@ int main() {
     CountingSort countingSort;
     RadixSort radixSort;
     HeapSort heapSort;
-    
+
     dsa::Array arrayAlgorithms;
 
     std::cout << std::endl; 
@@ -78,6 +95,18 @@ int main() {
     } else {
         std::cout << "No two numbers found that sum to " << two_sum_target << std::endl;
     }
+
+    std::cout << std::endl;
+
+    std::cout << "\n== Three Sum ==" << std::endl;
+    auto three_sum_result = arrayAlgorithms.threeSum(three_sum_array);
+    if (!three_sum_result.empty()) {
+        printArrayOfArrays(three_sum_result, "Triplets that sum to 0: ");
+    } else {
+        std::cout << "No triplets found." << std::endl;
+    }
+
+    std::cout << std::endl;
 
     return 0;
 }

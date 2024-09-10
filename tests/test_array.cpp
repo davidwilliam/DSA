@@ -20,3 +20,22 @@ TEST(ArrayTest, TwoSumNoSolution) {
     EXPECT_EQ(result.first, -1);
     EXPECT_EQ(result.second, -1);
 }
+
+TEST(ArrayTest, ThreeSumPositiveCase) {
+    dsa::Array array;
+    std::vector<int> nums = {-1, 0, 1, 2, -1, -4};
+    auto result = array.threeSum(nums);
+
+    std::vector<std::vector<int>> expected = {{-1, -1, 2}, {-1, 0, 1}};
+    
+    EXPECT_EQ(result.size(), expected.size());
+    EXPECT_EQ(result, expected);
+}
+
+TEST(ArrayTest, ThreeSumNoSolution) {
+    dsa::Array array;
+    std::vector<int> nums = {1, 2, 3, 4};
+    auto result = array.threeSum(nums);
+
+    EXPECT_TRUE(result.empty());
+}
