@@ -32,6 +32,9 @@ int main() {
     std::vector<int> radixsort_array = {170, 45, 75, 90, 802, 24, 2, 66};
     std::vector<int> heapsort_array = {12, 11, 13, 5, 6, 7};
 
+    std::vector<int> two_sum_array = {2, 7, 11, 15};
+    int two_sum_target = 22;
+
     BubbleSort bubbleSort;
     SelectionSort selectionSort;
     InsertionSort insertionSort;
@@ -41,6 +44,8 @@ int main() {
     CountingSort countingSort;
     RadixSort radixSort;
     HeapSort heapSort;
+    
+    dsa::Array arrayAlgorithms;
 
     std::cout << std::endl; 
     std::cout << "Welcome to the DSA Library!" << std::endl;
@@ -57,6 +62,22 @@ int main() {
     sortAndDisplay(heapsort_array, "Heap Sort", heapSort);
 
     std::cout << std::endl; 
+
+    std::cout << "== Two Sum ==" << std::endl;
+    std::cout << "Array: ";
+    for (const int& num : two_sum_array) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+    std::cout << "Target: " << two_sum_target << std::endl;
+
+    auto result = arrayAlgorithms.twoSum(two_sum_array, two_sum_target);
+    if (result.first != -1 && result.second != -1) {
+        std::cout << "Two numbers at indices " << result.first << " and " << result.second
+                  << " sum to " << two_sum_target << std::endl;
+    } else {
+        std::cout << "No two numbers found that sum to " << two_sum_target << std::endl;
+    }
 
     return 0;
 }
