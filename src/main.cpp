@@ -52,6 +52,9 @@ int main() {
 
     std::vector<int> three_sum_array = {-1, 0, 1, 2, -1, -4};
 
+    std::vector<int> four_sum_array = {1, 0, -1, 0, -2, 2};
+    int four_sum_target = 0;
+
     BubbleSort bubbleSort;
     SelectionSort selectionSort;
     InsertionSort insertionSort;
@@ -104,6 +107,16 @@ int main() {
         printArrayOfArrays(three_sum_result, "Triplets that sum to 0: ");
     } else {
         std::cout << "No triplets found." << std::endl;
+    }
+
+    std::cout << std::endl;
+
+    std::cout << "\n== Four Sum ==" << std::endl;
+    auto four_sum_result = arrayAlgorithms.fourSum(four_sum_array, four_sum_target);
+    if (!four_sum_result.empty()) {
+        printArrayOfArrays(four_sum_result, "Quadruplets that sum to 0: ");
+    } else {
+        std::cout << "No quadruplets found." << std::endl;
     }
 
     std::cout << std::endl;

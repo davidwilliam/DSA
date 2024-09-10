@@ -16,7 +16,7 @@ This is a project with straightforward implementations of solutions for problems
 
 This project provides implementations for various data structures and algorithms. Currently, it includes:
 
-- Sorting:
+- **Sorting:**
     - [Bubble Sort](https://www.davidwsilva.com/computer_science/cs_1/)
     - [Selection Sort](https://www.davidwsilva.com/computer_science/cs_2/)
     - Insertion Sort
@@ -26,9 +26,10 @@ This project provides implementations for various data structures and algorithms
     - Counting Sort
     - Radix Sort
     - Heap Sort
-- Array:
+- **Array:**
     - Two Sum
     - Three Sum
+    - Four Sum
 - Additional algorithms and data structures will be added progressively.
 
 The project supports C++17 and uses **CMake** as the build system and **GoogleTest** for testing.

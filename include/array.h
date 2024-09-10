@@ -12,6 +12,8 @@ namespace dsa {
         std::pair<int, int> twoSum(const std::vector<int>& nums, int target);
 
         std::vector<std::vector<int>> threeSum(std::vector<int>& nums);
+
+        std::vector<std::vector<int>> fourSum(std::vector<int>& nums, int target);
     };
 
 }
