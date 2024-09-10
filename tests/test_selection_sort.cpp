@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
 #include "selection_sort.h"
 
+using namespace dsa;
+
 TEST(SelectionSortTest, BestCase) {
     std::vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     SelectionSort sorter;

@@ -4,13 +4,15 @@
 #include "sorting.h"
 #include <vector>
 
-class MergeSort : public Sorting {
-public:
-    void sort(std::vector<int>& array) override;
+namespace dsa {
+    class MergeSort : public Sorting {
+    public:
+        void sort(std::vector<int>& array) override;
 
-private:
-    void mergeSort(std::vector<int>& array, int left, int right);
-    void merge(std::vector<int>& array, int left, int mid, int right);
-};
+    private:
+        void mergeSort(std::vector<int>& array, int left, int right);
+        void merge(std::vector<int>& array, int left, int mid, int right);
+    };
+}
 
 #endif

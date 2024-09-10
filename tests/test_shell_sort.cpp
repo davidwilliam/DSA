@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
 #include "shell_sort.h"
 
+using namespace dsa;
+
 TEST(ShellSortTest, BestCase) {
     std::vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     ShellSort sorter;

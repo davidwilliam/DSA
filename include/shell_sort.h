@@ -4,9 +4,11 @@
 #include "sorting.h"
 #include <vector>
 
-class ShellSort : public Sorting {
-public:
-    void sort(std::vector<int>& array) override;
-};
+namespace dsa {
+    class ShellSort : public Sorting {
+    public:
+        void sort(std::vector<int>& array) override;
+    };
+}
 
 #endif

@@ -2,6 +2,8 @@
 #include <vector>
 #include "dsa.h"
 
+using namespace dsa;
+
 void printArray(const std::vector<int>& array, const std::string& message) {
     std::cout << message;
     for (const int& num : array) {

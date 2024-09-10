@@ -3,11 +3,13 @@
 
 #include <vector>
 
-class Sorting {
-public:
-    virtual ~Sorting() {}
+namespace dsa {
+    class Sorting {
+    public:
+        virtual ~Sorting() {}
 
-    virtual void sort(std::vector<int>& array) = 0;
-};
+        virtual void sort(std::vector<int>& array) = 0;
+    };
+}
 
 #endif

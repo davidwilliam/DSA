@@ -4,12 +4,14 @@
 #include "sorting.h"
 #include <vector>
 
-class HeapSort : public Sorting {
-public:
-    void sort(std::vector<int>& array) override;
+namespace dsa {
+    class HeapSort : public Sorting {
+    public:
+        void sort(std::vector<int>& array) override;
 
-private:
-    void heapify(std::vector<int>& array, int n, int i);
-};
+    private:
+        void heapify(std::vector<int>& array, int n, int i);
+    };
+}
 
 #endif

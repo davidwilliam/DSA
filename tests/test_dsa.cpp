@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
 #include "dsa.h"
 
+using namespace dsa;
+
 TEST(ExampleTest, FunctionWorks) {
     EXPECT_EQ(1, 1); 
 }
