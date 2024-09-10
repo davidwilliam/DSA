@@ -11,5 +11,6 @@
 #include "radix_sort.h"
 #include "heap_sort.h"
 #include "array.h"
+#include "dsa_string.h"
 
 #endif

@@ -67,6 +67,10 @@ int main() {
 
     dsa::Array arrayAlgorithms;
 
+    dsa::String stringObj;
+    std::string testString1 = "A man, a plan, a canal: Panama";
+    std::string testString2 = "Not a palindrome";
+
     std::cout << std::endl; 
     std::cout << "Welcome to the DSA Library!" << std::endl;
     std::cout << "Here are some examples." << std::endl;
@@ -120,6 +124,14 @@ int main() {
     }
 
     std::cout << std::endl;
+
+    std::cout << "\n== Is a palindrome? ==" << std::endl;
+    std::cout << "Testing string: \"" << testString1 << "\"" << std::endl;
+    std::cout << "Is palindrome? " << (stringObj.isPalindrome(testString1) ? "Yes" : "No") << std::endl;
+
+    std::cout << "Testing string: \"" << testString2 << "\"" << std::endl;
+    std::cout << "Is palindrome? " << (stringObj.isPalindrome(testString2) ? "Yes" : "No") << std::endl;
+
 
     return 0;
 }

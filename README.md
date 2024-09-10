@@ -30,6 +30,8 @@ This project provides implementations for various data structures and algorithms
     - Two Sum
     - Three Sum
     - Four Sum
+- **String:**
+    - Is a palindrome?
 - Additional algorithms and data structures will be added progressively.
 
 The project supports C++17 and uses **CMake** as the build system and **GoogleTest** for testing.
