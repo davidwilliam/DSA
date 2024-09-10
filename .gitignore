@@ -56,3 +56,5 @@ googletest-build/
 # Folders for generated files
 Thumbs.db
 
+debug.rb
+
