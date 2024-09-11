@@ -1,6 +1,8 @@
 #include "dsa_string.h"
 #include <cctype> 
+#include <sstream> 
 #include <unordered_map>
+#include <vector>
 
 namespace dsa {
 
@@ -68,6 +70,43 @@ namespace dsa {
         for (const auto& count : charCount) {
             if (count.second != 0) {
                 return false;
+            }
+        }
+
+        return true;
+    }
+
+    bool String::followsPattern(const std::string& pattern, const std::string& s) {
+        std::unordered_map<char, std::string> charToWord;
+        std::unordered_map<std::string, char> wordToChar;
+
+        std::istringstream ss(s);
+        std::vector<std::string> words;
+        std::string word;
+
+        while (ss >> word) {
+            words.push_back(word);
+        }
+
+        if (pattern.length() != words.size()) {
+            return false;
+        }
+
+        for (int i = 0; i < pattern.length(); ++i) {
+            char patternChar = pattern[i];
+            const std::string& currentWord = words[i];
+
+            if (charToWord.count(patternChar)) {
+                if (charToWord[patternChar] != currentWord) {
+                    return false;
+                }
+            } else {
+                if (wordToChar.count(currentWord)) {
+                    return false;
+                }
+
+                charToWord[patternChar] = currentWord;
+                wordToChar[currentWord] = patternChar;
             }
         }
 

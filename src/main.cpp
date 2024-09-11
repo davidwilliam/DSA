@@ -97,6 +97,13 @@ void demoAnagram(dsa::String& stringObj, const std::string& s1, const std::strin
               << (stringObj.isAnagram(s1, s2) ? "Yes" : "No") << std::endl;
 }
 
+void demoPatternMatching(dsa::String& stringObj, const std::string& pattern, const std::string& s) {
+    std::cout << "\n== Pattern Matching ==" << std::endl;
+    std::cout << "Pattern: \"" << pattern << "\", String: \"" << s << "\"" << std::endl;
+    std::cout << "Does the string follow the pattern? "
+              << (stringObj.followsPattern(pattern, s) ? "Yes" : "No") << std::endl;
+}
+
 int main() {
     dsa::Array arrayObj;
     dsa::String stringObj;
@@ -133,6 +140,12 @@ int main() {
     std::string s7 = "rat";
     std::string s8 = "car";
 
+    std::string pattern1 = "abba";
+    std::string str1 = "dog cat cat dog";
+
+    std::string pattern2 = "abba";
+    std::string str2 = "dog cat cat fish";
+
     BubbleSort bubbleSort;
     SelectionSort selectionSort;
     InsertionSort insertionSort;
@@ -167,6 +180,9 @@ int main() {
 
     demoAnagram(stringObj, s5, s6);
     demoAnagram(stringObj, s7, s8);
+
+    demoPatternMatching(stringObj, pattern1, str1);
+    demoPatternMatching(stringObj, pattern2, str2);
 
     return 0;
 }

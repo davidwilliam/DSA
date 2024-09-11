@@ -53,3 +53,38 @@ TEST(StringTest, AnagramEmptyStrings) {
     std::string s2 = "";
     EXPECT_TRUE(stringObj.isAnagram(s1, s2));
 }
+
+TEST(StringTest, PatternMatchingPositiveCase) {
+    dsa::String stringObj;
+    std::string pattern = "abba";
+    std::string s = "dog cat cat dog";
+    EXPECT_TRUE(stringObj.followsPattern(pattern, s));
+}
+
+TEST(StringTest, PatternMatchingNegativeCase) {
+    dsa::String stringObj;
+    std::string pattern = "abba";
+    std::string s = "dog cat cat fish";
+    EXPECT_FALSE(stringObj.followsPattern(pattern, s));
+}
+
+TEST(StringTest, PatternMatchingDifferentLengths) {
+    dsa::String stringObj;
+    std::string pattern = "abba";
+    std::string s = "dog cat cat";
+    EXPECT_FALSE(stringObj.followsPattern(pattern, s));
+}
+
+TEST(StringTest, PatternMatchingAllSameWords) {
+    dsa::String stringObj;
+    std::string pattern = "aaaa";
+    std::string s = "dog dog dog dog";
+    EXPECT_TRUE(stringObj.followsPattern(pattern, s));
+}
+
+TEST(StringTest, PatternMatchingAllDifferentWords) {
+    dsa::String stringObj;
+    std::string pattern = "abcd";
+    std::string s = "dog cat fish bird";
+    EXPECT_TRUE(stringObj.followsPattern(pattern, s));
+}
