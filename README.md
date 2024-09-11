@@ -36,6 +36,8 @@ This project provides implementations for various data structures and algorithms
     - Strings are isomorphic?
     - Valid anagram?
     - Word Pattern
+- **Linked List**
+    - Reverse
 - Additional algorithms and data structures will be added progressively.
 
 The project supports C++17 and uses **CMake** as the build system and **GoogleTest** for testing.
@@ -93,12 +95,32 @@ cmake --build .
 
 This will compile the source files and generate the `main` and `main_exec` executable for running the demonstration program, as well as `test_exec` for running unit tests.
 
-# Running the demo
+# Running the Demos
 
-To run the demo:
+There are currently four demos:
+
+Sorting:
 
 ```bash
-./main
+./sorting_demo
+```
+
+Array:
+
+```bash
+./array_demo
+```
+
+String:
+
+```bash
+./string_demo
+```
+
+Linked List:
+
+```bash
+./linked_list_demo
 ```
 
 # Running the Tests
