@@ -30,6 +30,7 @@ This project provides implementations for various data structures and algorithms
     - Two Sum
     - Three Sum
     - Four Sum
+    - Remove Duplicates from Sorted Array
 - **String:**
     - Is a palindrome?
     - Strings are isomorphic?
