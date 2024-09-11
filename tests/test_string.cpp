@@ -32,3 +32,24 @@ TEST(StringTest, NonIsomorphicStrings) {
     EXPECT_FALSE(stringObj.isIsomorphic("foo", "bar"));
     EXPECT_FALSE(stringObj.isIsomorphic("ab", "aa"));
 }
+
+TEST(StringTest, AnagramPositiveCase) {
+    dsa::String stringObj;
+    std::string s1 = "anagram";
+    std::string s2 = "nagaram";
+    EXPECT_TRUE(stringObj.isAnagram(s1, s2));
+}
+
+TEST(StringTest, AnagramNegativeCase) {
+    dsa::String stringObj;
+    std::string s1 = "rat";
+    std::string s2 = "car";
+    EXPECT_FALSE(stringObj.isAnagram(s1, s2));
+}
+
+TEST(StringTest, AnagramEmptyStrings) {
+    dsa::String stringObj;
+    std::string s1 = "";
+    std::string s2 = "";
+    EXPECT_TRUE(stringObj.isAnagram(s1, s2));
+}

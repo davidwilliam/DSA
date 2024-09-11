@@ -52,4 +52,25 @@ namespace dsa {
         }
         return true;
     }
+
+    bool String::isAnagram(const std::string& s1, const std::string& s2) {
+        if (s1.size() != s2.size()) {
+            return false;
+        }
+
+        std::unordered_map<char, int> charCount;
+
+        for (size_t i = 0; i < s1.size(); ++i) {
+            charCount[s1[i]]++;
+            charCount[s2[i]]--;
+        }
+
+        for (const auto& count : charCount) {
+            if (count.second != 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }

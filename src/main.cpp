@@ -91,6 +91,12 @@ void demoRemoveDuplicates(dsa::Array& arrayObj, std::vector<int>& nums) {
     std::cout << "New length of the array after removing duplicates: " << newLength << std::endl;
 }
 
+void demoAnagram(dsa::String& stringObj, const std::string& s1, const std::string& s2) {
+    std::cout << "\n== Valid Anagram ==" << std::endl;
+    std::cout << "Testing if \"" << s1 << "\" and \"" << s2 << "\" are anagrams: "
+              << (stringObj.isAnagram(s1, s2) ? "Yes" : "No") << std::endl;
+}
+
 int main() {
     dsa::Array arrayObj;
     dsa::String stringObj;
@@ -120,6 +126,12 @@ int main() {
     std::string s2 = "add";
     std::string s3 = "foo";
     std::string s4 = "bar";
+
+    std::string s5 = "anagram";
+    std::string s6 = "nagaram";
+
+    std::string s7 = "rat";
+    std::string s8 = "car";
 
     BubbleSort bubbleSort;
     SelectionSort selectionSort;
@@ -152,6 +164,9 @@ int main() {
     demoIsomorphic(stringObj, s1, s2);
     demoIsomorphic(stringObj, s3, s4);
     demoRemoveDuplicates(arrayObj, nums);
+
+    demoAnagram(stringObj, s5, s6);
+    demoAnagram(stringObj, s7, s8);
 
     return 0;
 }

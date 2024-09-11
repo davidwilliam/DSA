@@ -34,6 +34,7 @@ This project provides implementations for various data structures and algorithms
 - **String:**
     - Is a palindrome?
     - Strings are isomorphic?
+    - Valid anagram?
 - Additional algorithms and data structures will be added progressively.
 
 The project supports C++17 and uses **CMake** as the build system and **GoogleTest** for testing.

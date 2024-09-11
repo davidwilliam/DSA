@@ -9,6 +9,8 @@ namespace dsa {
         bool isPalindrome(const std::string& str);
 
         bool isIsomorphic(const std::string& s, const std::string& t);
+
+        bool isAnagram(const std::string& s1, const std::string& s2);
     };
 }
 
