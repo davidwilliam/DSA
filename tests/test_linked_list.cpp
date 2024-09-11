@@ -73,3 +73,30 @@ TEST(LinkedListTest, MultipleAppends) {
     EXPECT_EQ(output, "1 2 3 4 5 6 7 8 9 10 \n");
 }
 
+TEST(LinkedListTest, NoCycle) {
+    dsa::LinkedList list;
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(4);
+
+    EXPECT_FALSE(list.hasCycle());
+}
+
+TEST(LinkedListTest, DetectCycle) {
+    dsa::LinkedList list;
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(4);
+
+    list.createCycle(1);
+
+    EXPECT_TRUE(list.hasCycle());
+}
+
+TEST(LinkedListTest, NoCycleInEmptyList) {
+    dsa::LinkedList list;
+    EXPECT_FALSE(list.hasCycle());
+}
+

@@ -8,6 +8,7 @@ namespace dsa {
     struct Node {
         int data;
         Node* next;
+        Node* prev;
 
         Node(int value);
     };
@@ -16,15 +17,15 @@ namespace dsa {
     public:
         Node* head;
 
-        LinkedList();
-
-        ~LinkedList();
+        LinkedList(); 
+        ~LinkedList(); 
 
         void append(int value);
-
         void display() const;
+        void reverse();            
 
-        void reverse();
+        bool hasCycle() const; 
+        void createCycle(int position);
     };
 
 }
