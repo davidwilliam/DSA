@@ -60,3 +60,39 @@ TEST(ArrayTest, FourSumNoSolution) {
 
     EXPECT_TRUE(result.empty());
 }
+
+TEST(ArrayTest, RemoveDuplicatesBestCase) {
+    dsa::Array array;
+    std::vector<int> nums = {1, 2, 3, 4, 5};
+    int result = array.removeDuplicates(nums);
+    
+    EXPECT_EQ(result, 5); 
+    std::vector<int> expected = {1, 2, 3, 4, 5};
+    for (int i = 0; i < result; ++i) {
+        EXPECT_EQ(nums[i], expected[i]);
+    }
+}
+
+TEST(ArrayTest, RemoveDuplicatesAverageCase) {
+    dsa::Array array;
+    std::vector<int> nums = {1, 1, 2, 3, 3, 4};
+    int result = array.removeDuplicates(nums);
+    
+    EXPECT_EQ(result, 4); 
+    std::vector<int> expected = {1, 2, 3, 4};
+    for (int i = 0; i < result; ++i) {
+        EXPECT_EQ(nums[i], expected[i]);
+    }
+}
+
+TEST(ArrayTest, RemoveDuplicatesWorstCase) {
+    dsa::Array array;
+    std::vector<int> nums = {1, 1, 1, 1, 1};
+    int result = array.removeDuplicates(nums);
+    
+    EXPECT_EQ(result, 1); 
+    std::vector<int> expected = {1};
+    for (int i = 0; i < result; ++i) {
+        EXPECT_EQ(nums[i], expected[i]);
+    }
+}

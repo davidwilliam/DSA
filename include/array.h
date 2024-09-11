@@ -14,6 +14,8 @@ namespace dsa {
         std::vector<std::vector<int>> threeSum(std::vector<int>& nums);
 
         std::vector<std::vector<int>> fourSum(std::vector<int>& nums, int target);
+
+        int removeDuplicates(std::vector<int>& nums);
     };
 
 }
