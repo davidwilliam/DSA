@@ -70,6 +70,15 @@ void demoRemoveDuplicates(dsa::Array& arrayObj, std::vector<int>& nums) {
     std::cout << "New length of the array after removing duplicates: " << newLength << std::endl;
 }
 
+void demoRemoveElement(dsa::Array& arrayObj, std::vector<int>& nums, int value) {
+    std::cout << "\n== Remove Element ==" << std::endl;
+    printArray(nums, "Original array: ");
+    int newLength = arrayObj.removeElement(nums, value);
+    std::cout << "New length after removing " << value << ": " << newLength << std::endl;
+    std::vector<int> remainingNums(nums.begin(), nums.begin() + newLength);
+    printArray(remainingNums, "Array after removal: ");
+}
+
 int main() {
     dsa::Array arrayAlgorithms;
     std::vector<int> two_sum_array = {2, 7, 11, 15};
@@ -78,6 +87,8 @@ int main() {
     std::vector<int> four_sum_array = {1, 0, -1, 0, -2, 2};
     int four_sum_target = 0;
     std::vector<int> nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+    std::vector<int> remove_array = {3, 2, 2, 3};
+    int remove_value = 3;
 
     std::cout << "\nWelcome to the Array Algorithms Demo!" << std::endl;
 
@@ -85,6 +96,7 @@ int main() {
     demoThreeSum(arrayAlgorithms, three_sum_array);
     demoFourSum(arrayAlgorithms, four_sum_array, four_sum_target);
     demoRemoveDuplicates(arrayAlgorithms, nums);
+    demoRemoveElement(arrayAlgorithms, remove_array, remove_value);
 
     return 0;
 }

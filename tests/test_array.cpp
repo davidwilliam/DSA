@@ -96,3 +96,45 @@ TEST(ArrayTest, RemoveDuplicatesWorstCase) {
         EXPECT_EQ(nums[i], expected[i]);
     }
 }
+
+TEST(ArrayTest, RemoveElement) {
+    dsa::Array array;
+    
+    std::vector<int> nums = {3, 2, 2, 3};
+    int val = 3;
+    int expectedLength = 2;
+    
+    int newLength = array.removeElement(nums, val);
+    
+    EXPECT_EQ(newLength, expectedLength);
+
+    std::vector<int> expectedNums = {2, 2}; // Remaining elements after removal (order may vary)
+    for (int i = 0; i < newLength; ++i) {
+        EXPECT_EQ(nums[i], expectedNums[i]);
+    }
+}
+
+TEST(ArrayTest, RemoveElementNoMatch) {
+    dsa::Array array;
+
+    std::vector<int> nums = {1, 2, 3, 4, 5};
+    int val = 6; // No occurrences of 6
+    int expectedLength = 5;
+
+    int newLength = array.removeElement(nums, val);
+
+    EXPECT_EQ(newLength, expectedLength);
+    EXPECT_EQ(nums.size(), expectedLength);
+}
+
+TEST(ArrayTest, RemoveAllElements) {
+    dsa::Array array;
+
+    std::vector<int> nums = {4, 4, 4, 4};
+    int val = 4;
+    int expectedLength = 0;
+
+    int newLength = array.removeElement(nums, val);
+
+    EXPECT_EQ(newLength, expectedLength);
+}

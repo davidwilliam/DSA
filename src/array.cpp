@@ -110,5 +110,19 @@ namespace dsa {
         return i + 1;
     }
 
+    int Array::removeElement(std::vector<int>& nums, int val) {
+        int n = nums.size();
+        int i = 0;  // Pointer for the next valid position
+
+        for (int j = 0; j < n; ++j) {
+            if (nums[j] != val) {
+                nums[i] = nums[j];
+                i++;
+            }
+        }
+
+        return i;
+    }
+
 
 }
