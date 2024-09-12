@@ -13,6 +13,8 @@ namespace dsa {
         bool isAnagram(const std::string& s1, const std::string& s2);
 
         bool followsPattern(const std::string& pattern, const std::string& s);
+
+        void reverseString(std::string& s);
     };
 }
 

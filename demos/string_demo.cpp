@@ -28,6 +28,14 @@ void demoPatternMatching(dsa::String& stringObj, const std::string& pattern, con
               << (stringObj.followsPattern(pattern, s) ? "Yes" : "No") << std::endl;
 }
 
+void demoReverseString(dsa::String& stringObj, std::string& input) {
+    std::cout << "\n== Reverse String ==" << std::endl;
+    std::cout << "Original string: \"" << input << "\"" << std::endl;
+    stringObj.reverseString(input);
+    std::cout << "Reversed string: \"" << input << "\"" << std::endl;
+}
+
+
 int main() {
     dsa::String stringObj;
 
@@ -51,6 +59,8 @@ int main() {
     std::string pattern2 = "abba";
     std::string str2 = "dog cat cat fish";
 
+    std::string testString = "hello world";
+
     std::cout << "\nWelcome to the String Algorithms Demo!" << std::endl;
 
     demoPalindrome(stringObj, testString1);
@@ -61,6 +71,7 @@ int main() {
     demoAnagram(stringObj, s7, s8);
     demoPatternMatching(stringObj, pattern1, str1);
     demoPatternMatching(stringObj, pattern2, str2);
+    demoReverseString(stringObj, testString);
 
     return 0;
 }

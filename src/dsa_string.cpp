@@ -3,6 +3,7 @@
 #include <sstream> 
 #include <unordered_map>
 #include <vector>
+#include <string>
 
 namespace dsa {
 
@@ -111,5 +112,16 @@ namespace dsa {
         }
 
         return true;
+    }
+
+    void String::reverseString(std::string& s) {
+        int left = 0;
+        int right = s.size() - 1;
+
+        while (left < right) {
+            std::swap(s[left], s[right]);
+            left++;
+            right--;
+        }
     }
 }

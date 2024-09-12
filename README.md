@@ -37,6 +37,7 @@ This project provides implementations for various data structures and algorithms
     - Strings are isomorphic?
     - Valid anagram?
     - Word Pattern
+    - Reverse string
 - **Linked List**
     - Reverse
     - Detect Cycle

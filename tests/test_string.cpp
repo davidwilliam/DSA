@@ -88,3 +88,33 @@ TEST(StringTest, PatternMatchingAllDifferentWords) {
     std::string s = "dog cat fish bird";
     EXPECT_TRUE(stringObj.followsPattern(pattern, s));
 }
+
+TEST(StringTest, ReverseStringInPlace) {
+    dsa::String stringObj;
+
+    std::string input = "hello";
+    std::string expected = "olleh";
+    stringObj.reverseString(input);
+
+    EXPECT_EQ(input, expected);
+}
+
+TEST(StringTest, ReverseStringWithSpaces) {
+    dsa::String stringObj;
+
+    std::string input = "hello world";
+    std::string expected = "dlrow olleh";
+    stringObj.reverseString(input);
+
+    EXPECT_EQ(input, expected);
+}
+
+TEST(StringTest, ReverseEmptyString) {
+    dsa::String stringObj;
+
+    std::string input = "";
+    std::string expected = "";
+    stringObj.reverseString(input);
+
+    EXPECT_EQ(input, expected);
+}
