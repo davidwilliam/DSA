@@ -7,7 +7,6 @@ namespace dsa {
     LinkedList::LinkedList() : head(nullptr) {}
 
     LinkedList::~LinkedList() {
-
         if (hasCycle()) {
             std::cout << "Cycle detected, breaking the cycle before destruction..." << std::endl;
             Node* slow = head;
@@ -43,7 +42,6 @@ namespace dsa {
         }
         head = nullptr;
     }
-
 
     void LinkedList::append(int value) {
         Node* newNode = new Node(value);
@@ -117,5 +115,41 @@ namespace dsa {
 
         tail->next = cycleNode;
     }
+
+    void LinkedList::listCycle() const {
+    if (!hasCycle()) {
+        std::cout << "No cycle found in the linked list." << std::endl;
+        return;
+    }
+
+    Node* slow = head;
+    Node* fast = head;
+
+    while (fast != nullptr && fast->next != nullptr) {
+        slow = slow->next;
+        fast = fast->next->next;
+        if (slow == fast) {
+            break;
+        }
+    }
+
+    slow = head;
+    while (slow != fast) {
+        slow = slow->next;
+        fast = fast->next;
+    }
+
+    Node* cycleStart = slow;
+    std::cout << "Cycle detected. The cycle includes the following nodes: ";
+
+    Node* temp = cycleStart;
+    do {
+        std::cout << temp->data << " ";
+        temp = temp->next;
+    } while (temp != cycleStart);
+
+    std::cout << std::endl;
+}
+
 
 }
