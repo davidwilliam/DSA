@@ -21,7 +21,7 @@ This project provides implementations for various data structures and algorithms
     - [Selection Sort](https://www.davidwsilva.com/computer_science/cs_2/)
     - [Insertion Sort](https://www.davidwsilva.com/computer_science/cs_3/)
     - [Quick Sort](https://www.davidwsilva.com/computer_science/cs_4/)
-    - Merge Sort
+    - [Merge Sort](https://www.davidwsilva.com/computer_science/cs_5/)
     - Shell Sort
     - Counting Sort
     - Radix Sort
